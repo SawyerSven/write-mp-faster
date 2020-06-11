@@ -1,0 +1,55 @@
+.size(@w,@h) {
+  width: @w;
+  height: @h;
+}
+
+.flex(@main-axis:flex-start,@cross-axis:flex-start,@direction:row,@wrap:nowrap) {
+  display: flex;
+  flex-flow: @direction @wrap;
+  justify-content: @main-axis;
+  align-items: @cross-axis;
+}
+
+.flex-center(@direction:'') when(default()) {
+  .flex(center,center);
+}
+.flex-center (@direction) when (@direction='row') {
+  .flex(center);
+}
+.flex-center (@direction) when (@direction='column') {
+  .flex(center,flex-start,column);
+}
+
+.clearfix {
+  &::after,
+  &::before {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+.ellipsis() {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.ellipsis-mult(@n: 3) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @n;
+  word-break: break-all;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.none-select() {
+  user-select: none;
+}

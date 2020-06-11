@@ -1,0 +1,20 @@
+{
+  "name": "base-mp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "sunsiyuan <siyuan.sun1@baozun.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-less": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "mini-ali-ui": "^1.0.11"
+  },
+  "scripts": {
+    "dev": "gulp less2Css"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "less-plugin-autoprefix": "^2.0.0"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+pages
+.tea
+.vscode
+
+
+# 小程序文件
+mini.project.json
+app.*
